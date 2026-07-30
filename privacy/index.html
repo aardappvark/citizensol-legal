@@ -37,18 +37,18 @@
         </div>
 
         <h1>Privacy <span>Policy</span></h1>
-        <p class="date">Effective: February 2026</p>
+        <p class="date">Effective: July 2026</p>
 
         <p>CitizenSol ("the App") is developed by MidMightBit Games ("we", "us", "our"). We are committed to protecting your privacy. This policy explains what data the App handles and how.</p>
 
-        <p><strong style="color: #14F195;">Summary: CitizenSol collects zero personal data. Everything stays on your device.</strong></p>
+        <p><strong style="color: #14F195;">Summary: CitizenSol collects zero personal data. Your study data stays on your device; the only information we receive is anonymous, aggregate usage counts, which you can turn off in Settings.</strong></p>
 
         <h2>1. Data We Do NOT Collect</h2>
         <p>We do not collect, store, transmit, or process any of the following:</p>
         <ul>
             <li>Personal information (name, email, phone number, date of birth)</li>
             <li>Account or login credentials</li>
-            <li>Usage analytics or behavioural data</li>
+            <li>Personal or behavioural analytics that could identify you (our analytics are anonymous and aggregate only — see Section 6)</li>
             <li>Device identifiers (IMEI, advertising ID, hardware serial)</li>
             <li>IP addresses</li>
             <li>Browsing or search history</li>
@@ -73,7 +73,7 @@
         <ul>
             <li>Stored locally on your device using Android EncryptedSharedPreferences (AES-256 encryption)</li>
             <li>Used solely to verify Seeker Genesis Token (SGT) ownership on the Solana blockchain</li>
-            <li>Never transmitted to our servers (we have no servers)</li>
+            <li>Never transmitted to any server</li>
             <li>Never shared with any third party</li>
             <li>Readable only by the App on your device</li>
         </ul>
@@ -93,18 +93,20 @@
         </ul>
         <p>See our <a href="../sanctions.html">Sanctions Policy</a> for details on regional restrictions.</p>
 
-        <h2>6. Third-Party Services</h2>
-        <p>The App does not integrate any third-party analytics, advertising, or tracking services. The only external communication is:</p>
+        <h2>6. Anonymous Analytics &amp; External Communication</h2>
+        <p>CitizenSol sends <strong style="color: #ccc;">anonymous, aggregate usage counts</strong> (for example, that the app was opened or a mock test was started) to our own analytics endpoint, solely to understand which features are used and improve the App. These events contain <strong style="color: #ccc;">no personal data, no account, no device or advertising identifier, and no install identifier</strong> — they cannot be linked to you or your device. Approximate country is derived at our analytics provider's (Vercel) edge network from the request; your IP address is never logged or stored. This is optional — you can disable it any time in <strong style="color: #ccc;">Settings &gt; Privacy &gt; "Anonymous analytics."</strong> It is consistent with GDPR (Recital 26), CCPA, LGPD, APPI, and PIPA without consent.</p>
+        <p>The App does not integrate any third-party analytics, advertising, or tracking SDKs. External communication is limited to:</p>
         <ul>
+            <li><strong style="color: #ccc;">Anonymous analytics</strong> — aggregate event counts sent to our own endpoint, as described above (opt-out in Settings)</li>
             <li><strong style="color: #ccc;">Solana blockchain</strong> — read-only queries via your installed wallet app for SGT verification (only if you choose to connect a wallet)</li>
         </ul>
-        <p>No data is sent to Google, Facebook, Firebase, Crashlytics, or any other analytics or advertising platform.</p>
+        <p>No data is sent to Google, Facebook, Firebase, Crashlytics, or any other third-party analytics or advertising platform.</p>
 
         <h2>7. Children's Privacy</h2>
         <p>CitizenSol is not directed to children under 13 years of age. We do not knowingly collect personal information from children. Since the App collects no personal data from any user, no special provisions for children's data are necessary.</p>
 
         <h2>8. International Privacy Law Compliance</h2>
-        <p>Because CitizenSol collects no personal data, the App inherently complies with major privacy regulations:</p>
+        <p>Because CitizenSol collects no personal data — its analytics are anonymous and aggregate only — the App inherently complies with major privacy regulations:</p>
 
         <h3>GDPR (European Union)</h3>
         <p>No personal data is collected or processed. No consent mechanisms are required as there is no data processing to consent to. No data transfers occur.</p>
@@ -130,10 +132,10 @@
             <li><strong style="color: #ccc;">Clear app data:</strong> Go to Android Settings &gt; Apps &gt; CitizenSol &gt; Storage &gt; Clear Data</li>
             <li><strong style="color: #ccc;">Uninstall:</strong> Uninstalling the App removes all associated data from your device</li>
         </ul>
-        <p>No data exists on any external server to delete.</p>
+        <p>The only information on any server is anonymous, aggregate counts that cannot be linked to you or your device, so there is no personal record to delete. You can also stop all analytics at any time via Settings &gt; Privacy &gt; "Anonymous analytics."</p>
 
         <h2>10. Data Security</h2>
-        <p>All data is stored in the App's private storage sandbox on your device, protected by Android's application sandboxing. Wallet addresses are additionally encrypted using EncryptedSharedPreferences (AES-256-SIV for keys, AES-256-GCM for values). No data is transmitted over any network by the App.</p>
+        <p>All personal data is stored in the App's private storage sandbox on your device, protected by Android's application sandboxing. Wallet addresses are additionally encrypted using EncryptedSharedPreferences (AES-256-SIV for keys, AES-256-GCM for values). The only data the App transmits over the network is the anonymous, aggregate analytics described in Section 6, which contains no personal data.</p>
 
         <h2>11. Changes to This Policy</h2>
         <p>If we update this Privacy Policy, changes will be posted on this page with an updated effective date. As the App collects no data, material changes are unlikely.</p>
