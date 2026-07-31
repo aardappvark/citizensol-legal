@@ -77,7 +77,7 @@
             <li>Never shared with any third party</li>
             <li>Readable only by the App on your device</li>
         </ul>
-        <p>Wallet connection is entirely optional. The App functions fully without it. The connection is read-only — the App cannot initiate, sign, or submit any blockchain transactions.</p>
+        <p>Wallet connection is entirely optional. The App functions fully without it. The App never holds your keys or funds and cannot move anything on its own. The only transaction it may propose is the optional one-time <strong style="color: #ccc;">Pro</strong> unlock payment (see Section 6) — and you review and explicitly approve or decline it inside your own wallet before anything is submitted.</p>
 
         <h2>4. SGT (Seeker Genesis Token) Verification</h2>
         <p>When you verify SGT ownership, the App communicates directly with the Solana blockchain through your installed wallet app to check token ownership. This is a standard on-chain read operation. No personal data is transmitted during this process.</p>
@@ -99,6 +99,7 @@
         <ul>
             <li><strong style="color: #ccc;">Anonymous analytics</strong> — aggregate event counts sent to our own endpoint, as described above (opt-out in Settings)</li>
             <li><strong style="color: #ccc;">Solana blockchain</strong> — read-only queries via your installed wallet app for SGT verification (only if you choose to connect a wallet)</li>
+            <li><strong style="color: #ccc;">Pro unlock payment (optional)</strong> — if you choose to buy Pro, a one-time SOL or SKR transfer to our treasury that you sign and submit from your own wallet. We receive only the on-chain payment (a public wallet address + amount); we take no custody of your funds and store no card or bank details.</li>
         </ul>
         <p>No data is sent to Google, Facebook, Firebase, Crashlytics, or any other third-party analytics or advertising platform.</p>
 
