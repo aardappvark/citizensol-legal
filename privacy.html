@@ -37,7 +37,7 @@
         </div>
 
         <h1>Privacy <span>Policy</span></h1>
-        <p class="date">Effective: July 2026</p>
+        <p class="date">Effective: 7 August 2026</p>
 
         <p>CitizenSol ("the App") is developed by MidMightBit Games ("we", "us", "our"). We are committed to protecting your privacy. This policy explains what data the App handles and how.</p>
 
@@ -50,7 +50,7 @@
             <li>Account or login credentials</li>
             <li>Personal or behavioural analytics that could identify you (our analytics are anonymous and aggregate only — see Section 6)</li>
             <li>Device identifiers (IMEI, advertising ID, hardware serial)</li>
-            <li>IP addresses</li>
+            <li>IP addresses (we never log or store them; the third-party Solana RPC providers in Section 4 and our analytics edge receive your IP transiently, as with any internet request)</li>
             <li>Browsing or search history</li>
             <li>Contacts, photos, or media</li>
             <li>Crash reports or diagnostic data</li>
@@ -58,7 +58,7 @@
         </ul>
 
         <h2>2. Data Stored Locally on Your Device</h2>
-        <p>The App stores the following data exclusively on your device using Android's SharedPreferences. This data never leaves your device and is not accessible to us or any third party:</p>
+        <p>The App stores the following data on your device using Android's SharedPreferences. We cannot read it and it is not sent to us:</p>
         <ul>
             <li><strong style="color: #ccc;">Quiz progress and scores</strong> — your answers, streaks, and performance history</li>
             <li><strong style="color: #ccc;">Spaced repetition data</strong> — review intervals and mastery levels for each question</li>
@@ -67,20 +67,21 @@
             <li><strong style="color: #ccc;">Daily challenge state</strong> — current challenge progress and history</li>
             <li><strong style="color: #ccc;">Widget configuration</strong> — home screen widget display preferences</li>
         </ul>
+        <p>If Android Backup is enabled on your device, the App's settings and progress data are included in your device's encrypted Google backup, survive uninstalling the App, and may be restored when you reinstall. Wallet data is always excluded from backup. You can exclude the App from backup in Android Settings or delete the backup from your Google account.</p>
 
         <h2>3. Wallet Address</h2>
         <p>If you choose to connect a Solana wallet via Sign In With Solana (SIWS), your public wallet address is:</p>
         <ul>
             <li>Stored locally on your device using Android EncryptedSharedPreferences (AES-256 encryption)</li>
-            <li>Used solely to verify Seeker Genesis Token (SGT) ownership on the Solana blockchain</li>
-            <li>Never transmitted to any server</li>
-            <li>Never shared with any third party</li>
+            <li>Used to verify Seeker Genesis Token (SGT) ownership, submit the optional Pro payment, and restore a prior purchase on the Solana blockchain</li>
+            <li>Sent only to the Solana RPC providers named in Section 4, for the purposes above</li>
+            <li>Never shared with any other third party</li>
             <li>Readable only by the App on your device</li>
         </ul>
         <p>Wallet connection is entirely optional. The App functions fully without it. The App never holds your keys or funds and cannot move anything on its own. The only transaction it may propose is the optional one-time <strong style="color: #ccc;">Pro</strong> unlock payment (see Section 6) — and you review and explicitly approve or decline it inside your own wallet before anything is submitted.</p>
 
-        <h2>4. SGT (Seeker Genesis Token) Verification</h2>
-        <p>When you verify SGT ownership, the App communicates directly with the Solana blockchain through your installed wallet app to check token ownership. This is a standard on-chain read operation. No personal data is transmitted during this process.</p>
+        <h2>4. Solana Network Communication</h2>
+        <p>To verify Seeker Genesis Token status, submit payments, and restore purchases, the App sends your wallet's public address to Solana RPC providers: api.mainnet-beta.solana.com and, as a fallback, solana-rpc.publicnode.com (Allnodes). These providers receive your IP address and the public address. Private keys never leave your wallet.</p>
 
         <h2>5. Location Data</h2>
         <p>The App uses coarse device signals (SIM country, network country, locale, timezone) solely for sanctions compliance — to determine whether the App may legally operate in your region. This check:</p>
@@ -98,7 +99,7 @@
         <p>The App does not integrate any third-party analytics, advertising, or tracking SDKs. External communication is limited to:</p>
         <ul>
             <li><strong style="color: #ccc;">Anonymous analytics</strong> — aggregate event counts sent to our own endpoint, as described above (opt-out in Settings)</li>
-            <li><strong style="color: #ccc;">Solana blockchain</strong> — read-only queries via your installed wallet app for SGT verification (only if you choose to connect a wallet)</li>
+            <li><strong style="color: #ccc;">Solana RPC providers</strong> — api.mainnet-beta.solana.com and, as a fallback, solana-rpc.publicnode.com (Allnodes) receive your public wallet address (and, as with any internet request, your IP address) for SGT verification, payment submission, and purchase restore — only if you choose to connect a wallet (see Section 4)</li>
             <li><strong style="color: #ccc;">Pro unlock payment (optional)</strong> — if you choose to buy Pro, a one-time SOL or SKR transfer to our treasury that you sign and submit from your own wallet. We receive only the on-chain payment (a public wallet address + amount); we take no custody of your funds and store no card or bank details.</li>
         </ul>
         <p>No data is sent to Google, Facebook, Firebase, Crashlytics, or any other third-party analytics or advertising platform.</p>
@@ -133,10 +134,11 @@
             <li><strong style="color: #ccc;">Clear app data:</strong> Go to Android Settings &gt; Apps &gt; CitizenSol &gt; Storage &gt; Clear Data</li>
             <li><strong style="color: #ccc;">Uninstall:</strong> Uninstalling the App removes all associated data from your device</li>
         </ul>
+        <p>If Android Backup is enabled on your device, the App's settings and progress data are included in your device's encrypted Google backup, survive uninstalling the App, and may be restored when you reinstall. Wallet data is always excluded from backup. You can exclude the App from backup in Android Settings or delete the backup from your Google account.</p>
         <p>The only information on any server is anonymous, aggregate counts that cannot be linked to you or your device, so there is no personal record to delete. You can also stop all analytics at any time via Settings &gt; Privacy &gt; "Anonymous analytics."</p>
 
         <h2>10. Data Security</h2>
-        <p>All personal data is stored in the App's private storage sandbox on your device, protected by Android's application sandboxing. Wallet addresses are additionally encrypted using EncryptedSharedPreferences (AES-256-SIV for keys, AES-256-GCM for values). The only data the App transmits over the network is the anonymous, aggregate analytics described in Section 6, which contains no personal data.</p>
+        <p>All personal data is stored in the App's private storage sandbox on your device, protected by Android's application sandboxing. Wallet addresses are additionally encrypted using EncryptedSharedPreferences (AES-256-SIV for keys, AES-256-GCM for values). The only data the App transmits over the network is the anonymous, aggregate analytics described in Section 6 and, if you connect a wallet, the public wallet address sent to the Solana RPC providers described in Section 4.</p>
 
         <h2>11. Changes to This Policy</h2>
         <p>If we update this Privacy Policy, changes will be posted on this page with an updated effective date. As the App collects no data, material changes are unlikely.</p>
